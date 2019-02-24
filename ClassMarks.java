@@ -18,6 +18,7 @@ public class ClassMarks {
         Random rand = new Random();
         double average;
         double[][] classMarks = new double[4][6];
+
         // Cycles through every student in the class
         for (int students = 0; students < classMarks.length; students ++)
         {
