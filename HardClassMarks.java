@@ -19,12 +19,14 @@ public class HardClassMarks {
         double average;
         double[][] classMarks = new double[4][6];
         // Cycles through every student in the class
+
         for (int students = 0; students < classMarks.length; students ++)
         {
             System.out.printf("Student %s marks  :  ", Integer.toString(students + 1));
             // Cycles through each of their assignments
             for (int assignments = 0; assignments < classMarks[students].length; assignments ++)
             {
+                // Generates a mark from 80-100
                 classMarks[students][assignments] = rand.nextInt(100 - 80) + 80;
                 if (assignments < classMarks[students].length - 1)
                 {
