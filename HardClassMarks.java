@@ -18,6 +18,17 @@ public class HardClassMarks {
         Random rand = new Random();
         double average;
         double[][] classMarks = new double[4][6];
+        int numTimes = 0;
+        int [] arr = new int[5050];
+
+        for (int i = 0; i < 100; i++)
+        {
+            for (int c = 0; c <= i; c++)
+            {
+                numTimes += 1;
+                arr[numTimes - 1] = i + 1;
+            }
+        }
         // Cycles through every student in the class
 
         for (int students = 0; students < classMarks.length; students ++)
@@ -27,7 +38,7 @@ public class HardClassMarks {
             for (int assignments = 0; assignments < classMarks[students].length; assignments ++)
             {
                 // Generates a mark from 80-100
-                classMarks[students][assignments] = rand.nextInt(100 - 80) + 80;
+                classMarks[students][assignments] = arr[rand.nextInt(5050)];
                 if (assignments < classMarks[students].length - 1)
                 {
                     System.out.print(classMarks[students][assignments] + ", ");
