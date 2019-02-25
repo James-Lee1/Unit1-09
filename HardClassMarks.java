@@ -22,12 +22,12 @@ public class HardClassMarks {
         int [] arr = new int[5050];
 
         // Makes it more likely to get a higher number
-        for (int i = 0; i < 100; i++)
+        for (int i = 1; i <= 100; i++)
         {
-            for (int c = 0; c <= i; c++)
+            for (int c = 0; c < i; c++)
             {
+                arr[numTimes] = i;
                 numTimes += 1;
-                arr[numTimes - 1] = i + 1;
             }
         }
 
@@ -38,7 +38,7 @@ public class HardClassMarks {
             // Cycles through each of their assignments
             for (int assignments = 0; assignments < classMarks[students].length; assignments ++)
             {
-                // Generates a mark from 80-100
+                // Generates a number from 1-100
                 classMarks[students][assignments] = arr[rand.nextInt(5050)];
                 if (assignments < classMarks[students].length - 1)
                 {
