@@ -21,6 +21,7 @@ public class HardClassMarks {
         int numTimes = 0;
         int [] arr = new int[5050];
 
+        // Makes it more likely to get a higher number
         for (int i = 0; i < 100; i++)
         {
             for (int c = 0; c <= i; c++)
@@ -29,8 +30,8 @@ public class HardClassMarks {
                 arr[numTimes - 1] = i + 1;
             }
         }
-        // Cycles through every student in the class
 
+        // Cycles through every student in the class
         for (int students = 0; students < classMarks.length; students ++)
         {
             System.out.printf("Student %s marks  :  ", Integer.toString(students + 1));
