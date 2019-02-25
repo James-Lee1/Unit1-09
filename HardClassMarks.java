@@ -50,31 +50,31 @@ public class HardClassMarks {
             }
         }
 
-        average = averageCalc(classMarks);
+        average = averageMark(classMarks);
         System.out.printf("The class average is %.1f%n",average);
     }
 
-    public static double averageCalc(double[][] classMarks)
+    public static double averageMark(double[][] classMarks)
     {
         double average;
-        double total;
-        double arrLength;
-        total = 0.0;
-        arrLength = 0;
+        double totalSum;
+        double totalNumOfElem;
+        totalSum = 0.0;
+        totalNumOfElem = 0;
 
         for(int i=0; i < classMarks.length; i++)
         {
-            for (int j = 0; j < 6; j++)
+            for (int j = 0; j < classMarks[0].length; j++)
             {
                 // Adds up the total of all the class marks
-                total = total + classMarks[i][j];
+                totalSum = totalSum + classMarks[i][j];
                 // FInds total length of array
-                arrLength += 1;
+                totalNumOfElem += 1;
             }
         }
 
         // Finds the average
-        average = total / arrLength;
+        average = totalSum / totalNumOfElem;
         return average;
     }
 
